@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>
+      Search for YourSelf!
+    </title>
+  </head>
+  <body>
+    <p>
+    </p>
+
+
+    <form method="post" action="/dashboard/" novalidate>
+        {% csrf_token %}
+        <table border="1">
+      
+            <tr>
+              <th>{{ form.pincode.label_tag }}</th>
+              <td>
+                {{ form.pincode.errors }}
+                {{ form.pincode }}
+              </td>
+            </tr>
+      
+            <tr>
+              <th>{{ form.date.label_tag }}</th>
+              <td>
+                {{ form.date.errors }}
+                {{ form.date }}
+              </td>
+            </tr>
+
+            <tr>
+                <th>{{ form.email.label_tag }}</th>
+                <td>
+                  {{ form.email.errors }}
+                  {{ form.email }}
+                </td>
+              </tr>
+
+      
+        </table>
+      
+        <button type="submit">Submit</button>
+      </form>
+
+  </body>
+</html>
